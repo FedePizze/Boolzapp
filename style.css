@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.center{
+    display: flex;
+    align-items: center;
+}
+
+
+/* ---------------------------------------------------- */
+
+
+/* ICONE */
+.fa-circle-notch, .fa-message, .fa-ellipsis-vertical, .fa-magnifying-glass, .fa-paperclip{
+    font-size: 25px;
+    margin-left: 15px;
+    color: #b1b1b1;
+}
+
+.fa-face-smile, .fa-microphone{
+    font-size: 25px;
+    margin: 0px 5px;
+    color: #6a7376;
+}
+
+.fa-ellipsis-vertical{
+    margin-right: 10px;
+}
+
+.fa-bell{
+    font-size: 18px;
+    color: #8edafd;
+}
+
+.lente2{
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+
+/* ---------------------------------------------------- */
+
+
+/* TESTI */
+h5{
+    color: #6a7376;
+    text-decoration: underline;
+}
+
+h6{
+    color: #6a7376;
+}
+
+.greyText{
+    color: #b1b1b1;
+}
+
+.userText{
+    margin-bottom: 5px;
+}
+
+
+/* ---------------------------------------------------- */
+
+
+/* BOX PRINCIPALI */
+.canva{
+    width: 100%;
+    height: 100vh;
+    background-image: repeating-linear-gradient(black 20%, #e2e2dc 10%, #1b9688 2000%);
+    padding-top: 5vh;
+}
+
+.container{
+    max-width: 1000px;
+    height: 90vh;
+    margin: 0px auto;
+    display: flex;
+}
+
+
+/* ---------------------------------------------------- */
+
+
+/* ASIDE BOX*/
+#asideBox{
+    width: 35%;
+    height: 100%;
+    background-color: black; /*DELATE*/
+    display: flex;
+    flex-direction: column;
+}
+
+/* MESSAGE BOX */
+#messageBox{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*BOX*/
+.topBox{
+    width: 100%;
+    height: 10%;
+    padding: 10px;
+    justify-content: space-between;
+    background-color: #ebebeb;
+}
+
+.warning{
+    width: 100%;
+    height: 12.5%;
+    padding: 10px;
+    background-color: #8edafd;
+}
+
+.search{
+    width: 100%;
+    height: 7%;
+    padding: 25px 10px;
+    display: flex;
+    align-items: center;
+    background-color: #f7f7f7;
+}
+
+#searchBox{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+.bottomBox{
+    width: 100%;
+    height: 70.5%;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f7f7;
+}
+
+#iconBox{
+    height: 100%;
+    border-right: 1.5px solid rgb(236, 236, 236);
+    background-color: white;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.middleBox{
+    width: 100%;
+    height: 80%;
+    padding: 20px;
+    background-image: url('img/mine.jpg');
+    background-size: contain;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    flex-direction: cc;
+    flex-wrap: wrap;
+}
+
+#infoBar{
+    background-color: #f4eeea;
+}
+
+
+/* STILIZZAZIONI ASIDE BOSSAGE BOX*/
+img{
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    padding-right: 10px;
+}
+
+.topLeft{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#bell{
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: white;
+}
+
+.inputText{
+    width: 87%;
+    height: 95%;
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.inputSearch{
+    width: 90%;
+    height: 50%;
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.icon{
+    width: 100%;
+    height: 80px;
+    padding-left: 10px;
+    border-top: 1.5px solid rgb(236, 236, 236);
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.profileImg{
+    padding: 10px;
+}
+
+.iconText{
+    width: 100%;
+    padding-left: 10px;
+}
+
+.timer{
+    text-align: right;
+    margin: 0px 10px 5px 0px;
+}
+
+
+/* ---------------------------------------------------- */
+
+
+/* STILIZZAZIONE CHAT */
+.userMessage{
+    max-width: 400px;
+    margin: 10px 0px;
+    padding: 15px 20px 10px 20px;
+    border-radius: 10px;
+    background-color: #d6f9ba;
+    float: right;
+    text-align: right;
+    clear: both;
+}
+
+.chatHour{
+    margin-right: -10px;
+}
+
+.otherMessage{
+    max-width: 400px;
+    margin: 10px 0px;
+    padding: 15px 20px 10px 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    float: left;
+    text-align: left;
+    clear: both;
+}
+
+
+
+
+
+
+
