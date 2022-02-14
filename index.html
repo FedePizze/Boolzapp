@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolzapp</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    
+
+    <div class="canva" id="app">
+
+        <div class="container">
+
+            <!-- ASIDE BOX -->
+            <div id="asideBox">
+                <div class="topBox center">
+
+                    <div class="topLeft center">
+                        <img src="img/avatar_io.jpg" alt="utente">
+                        <h4>Nome Utente</h4>
+                    </div>
+                    
+                    <div class="topRight">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    
+                </div>
+
+                <div class="warning center">
+
+                    <div id="bell">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+
+                    <div>
+                        <h4>Ricevi notifiche di nuovi messaggi</h4>
+                        <h5>Attiva notifiche desktop</h5>
+                    </div>
+
+
+                </div>
+
+                <div class="search">
+
+                    <div id="searchBox">
+                        <i class="fa-solid fa-magnifying-glass lente2"></i>
+                        <input type="search" class="inputSearch" placeholder="Cerca o inizia una nuova chat">
+                    </div>
+
+                </div>
+
+                <div class="bottomBox">
+
+                    <div id="iconBox">
+                        <div class="icon">
+                            <img src="img/avatar_io.jpg" class="profileImg" alt="utente">
+                            
+                            <div class="iconText">
+                                <h6 class="timer greyText">Giorno Anno</h6>
+                                <h4>Nome Utente</h4>
+                                <h6 class="greyText">Intro messaggio</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- MESSAGE BOX -->
+            <div id="messageBox">
+
+                <div class="topBox center">
+                    <div class="topLeft">
+
+                        <img src="img/avatar_1.jpg" alt="utente">
+
+                        <div>
+                            <h4>Nome Utente</h4>
+                            <h6>Giorno Anno</h6>
+                            <h6>Ora</h6>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="topRight">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <div class="middleBox">
+
+                    <div class="userMessage">
+                        <h4 class="userText">Hai portato a spasso il cane</h4>
+                        <h6 class="greyText chatHour">Giorno Anno</h6>
+                    </div>
+
+                    <div class="otherMessage">
+                        <h4 class="userText">Hai portato a spasso il cane?</h4>
+                        <h6 class="greyText chatHour">Giorno Anno</h6>
+                    </div>
+                    
+                </div>
+
+                <div class="topBox" id="infoBar">
+
+                    <i class="fa-regular fa-face-smile"></i>
+                    <input type="text" class="inputText" placeholder="Scrivi un messaggio">
+                    <i class="fa-solid fa-microphone"></i>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
