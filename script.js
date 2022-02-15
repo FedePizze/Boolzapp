@@ -127,9 +127,11 @@ const app = new Vue({
                 
                 index = this.num
                 console.log(index)
+
+                const y = new Date()
                 
                 const obj = {
-                    date: '10/01/2020 15:30:55',
+                    date: y.getDate() + '/' + (y.getMonth() + 1) + '/' + y.getFullYear() + ' ' + y.getHours() + '.' + y.getMinutes() + '.' + y.getSeconds(),
                     text: this.textMessage ,
                     status: 'sent'
                 }
@@ -140,7 +142,7 @@ const app = new Vue({
                 setTimeout(() => {
 
                     const obj2 = {
-                        date: '10/01/2020 15:30:55',
+                        date: y.getDate() + '/' + (y.getMonth() + 1) + '/' + y.getFullYear() + ' ' + y.getHours() + '.' + y.getMinutes() + '.' + y.getSeconds(),
                         text: 'ok',
                         status: 'recived'
                     }
@@ -170,4 +172,3 @@ const app = new Vue({
     }
 
 })
-
