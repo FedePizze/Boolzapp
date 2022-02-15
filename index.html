@@ -101,13 +101,8 @@
 
                 <div v-if="nome != '' " class="middleBox">
 
-                    <div class="userMessage" v-for="(elemento, index) in user[num].message">
+                    <div :class="elemento.status == 'sent' ? 'userMessage' : 'otherMessage' " v-for="(elemento, index) in user[num].message">
                         <h4 class="userText">{{elemento.text}}</h4>
-                        <h6 class="greyText chatHour">Giorno Anno</h6>
-                    </div>
-
-                    <div class="otherMessage">
-                        <h4 class="userText">Hai portato a spasso il cane?</h4>
                         <h6 class="greyText chatHour">Giorno Anno</h6>
                     </div>
                     
