@@ -64,9 +64,9 @@
                             <img :src=' `./img/avatar${elemento.avatar}.jpg` ' class="profileImg" alt="utente">
                             
                             <div class="iconText">
-                                <h6 class="timer greyText">Giorno Anno</h6>
+                                <h6 class="timer greyText">{{elemento.message[elemento.message.length - 1].date}}</h6>
                                 <h4>{{elemento.name}}</h4>
-                                <h6 class="greyText">{{elemento.message[elemento.message.length - 1].text}}</h6>
+                                <h6 class="greyText" id="modi">{{elemento.message[elemento.message.length - 1].text}}</h6>
                             </div>
                         </div>
                     </div>
@@ -85,8 +85,8 @@
 
                         <div v-if="nome != '' ">
                             <h4>{{nome}}</h4>
-                            <h6>Giorno Anno</h6>
-                            <h6>Ora</h6>
+                            <h6>ultimo accesso:</h6>
+                            <h6>{{user[num].message[user[num].message.length - 1].date}}</h6>
                         </div>
                         <div v-else></div>
                         
@@ -103,13 +103,11 @@
 
                     <div :class="elemento.status == 'sent' ? 'userMessage' : 'otherMessage' " v-for="(elemento, index) in user[num].message">
                         <h4 class="userText">{{elemento.text}}</h4>
-                        <h6 class="greyText chatHour">Giorno Anno</h6>
+                        <h6 class="greyText chatHour">{{elemento.date}}</h6>
                     </div>
                     
                 </div>
                 <div v-else class="middleBox"><h2>Seleziona una chat</h2></div>
-
-
 
                 <div class="topBox" id="infoBar">
 
