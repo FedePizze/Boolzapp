@@ -150,17 +150,6 @@ const app = new Vue({
                 }, 1000);
             }
         },
-
-        set() {
-
-            this.autoScroll = setInterval(() => {
-
-                this.nextSlide()
-
-            }, 1000);
-
-        },
-
     },
 
     computed: {
