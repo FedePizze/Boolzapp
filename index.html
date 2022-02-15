@@ -52,7 +52,7 @@
 
                     <div id="searchBox">
                         <i class="fa-solid fa-magnifying-glass lente2"></i>
-                        <input type="search" class="inputSearch" placeholder="Cerca o inizia una nuova chat">
+                        <input type="input" v-model="search" class="inputSearch" placeholder="Cerca o inizia una nuova chat">
                     </div>
 
                 </div>
@@ -60,12 +60,12 @@
                 <div class="bottomBox">
 
                     <div id="iconBox">
-                        <div class="icon">
-                            <img src="img/avatar_io.jpg" class="profileImg" alt="utente">
+                        <div class="icon" v-for="(elemento, index) in filtraNomi" @click="select(index)">
+                            <img :src=' `./img/avatar${elemento.avatar}.jpg` ' class="profileImg" alt="utente">
                             
                             <div class="iconText">
                                 <h6 class="timer greyText">Giorno Anno</h6>
-                                <h4>Nome Utente</h4>
+                                <h4>{{elemento.name}}</h4>
                                 <h6 class="greyText">Intro messaggio</h6>
                             </div>
                         </div>
@@ -77,16 +77,18 @@
             <!-- MESSAGE BOX -->
             <div id="messageBox">
 
-                <div class="topBox center">
+                <div class="topBox center" id="bordo"> <!-- SISTEMARE -->
                     <div class="topLeft">
 
-                        <img src="img/avatar_1.jpg" alt="utente">
+                        <img v-if="src != '' " :src=' `./img/avatar${src}.jpg` ' alt="utente">
+                        <div v-else></div>
 
-                        <div>
-                            <h4>Nome Utente</h4>
+                        <div v-if="nome != '' ">
+                            <h4>{{nome}}</h4>
                             <h6>Giorno Anno</h6>
                             <h6>Ora</h6>
                         </div>
+                        <div v-else></div>
                         
                     </div>
                     
@@ -97,10 +99,10 @@
                     </div>
                 </div>
 
-                <div class="middleBox">
+                <div v-if="nome != '' " class="middleBox">
 
-                    <div class="userMessage">
-                        <h4 class="userText">Hai portato a spasso il cane</h4>
+                    <div class="userMessage" v-for="(elemento, index) in user[num].message">
+                        <h4 class="userText">{{elemento.text}}</h4>
                         <h6 class="greyText chatHour">Giorno Anno</h6>
                     </div>
 
@@ -110,11 +112,14 @@
                     </div>
                     
                 </div>
+                <div v-else class="middleBox"><h2>Seleziona una chat</h2></div>
+
+
 
                 <div class="topBox" id="infoBar">
 
                     <i class="fa-regular fa-face-smile"></i>
-                    <input type="text" class="inputText" placeholder="Scrivi un messaggio">
+                    <input @keyup.enter="message()" v-model="textMessage" type="text" class="inputText" placeholder="Scrivi un messaggio">
                     <i class="fa-solid fa-microphone"></i>
 
                 </div>
