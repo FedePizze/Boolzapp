@@ -95,7 +95,7 @@ const app = new Vue({
 
         nome: '',
         src: '',
-        num: '0',
+        num: '',
 
         active: 0,
 
@@ -136,8 +136,31 @@ const app = new Vue({
 
                 this.user[this.num].message.push(obj)
                 this.textMessage = ''
+
+                setTimeout(() => {
+
+                    const obj2 = {
+                        date: '10/01/2020 15:30:55',
+                        text: 'ok',
+                        status: 'recived'
+                    }
+
+                    this.user[this.num].message.push(obj2)
+    
+                }, 1000);
             }
         },
+
+        set() {
+
+            this.autoScroll = setInterval(() => {
+
+                this.nextSlide()
+
+            }, 1000);
+
+        },
+
     },
 
     computed: {
