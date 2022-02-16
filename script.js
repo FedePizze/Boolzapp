@@ -127,11 +127,9 @@ const app = new Vue({
                 
                 index = this.num
                 console.log(index)
-
-                const y = new Date()
                 
                 const obj = {
-                    date: y.getDate() + '/' + (y.getMonth() + 1) + '/' + y.getFullYear() + ' ' + y.getHours() + '.' + y.getMinutes() + '.' + y.getSeconds(),
+                    date: dayjs().format('DD/MM/YYYY HH.mm.ss'),
                     text: this.textMessage ,
                     status: 'sent'
                 }
@@ -142,7 +140,7 @@ const app = new Vue({
                 setTimeout(() => {
 
                     const obj2 = {
-                        date: y.getDate() + '/' + (y.getMonth() + 1) + '/' + y.getFullYear() + ' ' + y.getHours() + '.' + y.getMinutes() + '.' + y.getSeconds(),
+                        date: dayjs().format('DD/MM/YYYY HH.mm.ss'),
                         text: 'ok',
                         status: 'recived'
                     }
